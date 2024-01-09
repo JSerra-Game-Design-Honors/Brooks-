@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f107dc6d4c984c45bdafd3bb15f98f0, type: 3}
+  m_Name: CollisionEvents
+  m_EditorClassIdentifier: 
+  TutorialTitle:
+    m_Untranslated: Collision Events
+  m_TutorialTitle: 
+  m_ProgressTrackingEnabled: 0
+  m_LessonId: 
+  m_Version: 0
+  m_Scene: {fileID: 102900000, guid: 8326e1e72a8554c2f95421f57045dadc, type: 3}
+  m_DefaultSceneCameraSettings:
+    m_CameraMode: 0
+    m_FocusMode: 0
+    m_Orthographic: 0
+    m_Size: 0
+    m_Pivot: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: 0, y: 0, z: 0, w: 0}
+    m_FrameObject:
+      m_SceneGuid: 
+      m_GameObjectGuid: 
+      m_SerializedComponentType:
+        m_TypeName: 
+      m_ComponentIndex: 0
+      m_AssetObject: {fileID: 0}
+      m_Prefab: {fileID: 0}
+    m_Enabled: 0
+  m_WindowLayout: {fileID: 102900000, guid: cc5a4347551304f839df11ff2898b471, type: 3}
+  m_Pages:
+    m_Items:
+    - {fileID: 11400000, guid: fbe041688cfe0498c935ca234440433f, type: 2}
+    - {fileID: 11400000, guid: 95990dd34d6234271b83434d64922cb4, type: 2}
+    - {fileID: 11400000, guid: 795ffee8a6aa14b48b37d3dfee3c23a7, type: 2}
+    - {fileID: 11400000, guid: 073d57d62107a4e58b013c2da372afc6, type: 2}
+    - {fileID: 11400000, guid: d5d7bc459b9da47e78306050e7c39da7, type: 2}
+    - {fileID: 11400000, guid: 17141a8ed064741678a6a8f91ff3027f, type: 2}
+    - {fileID: 11400000, guid: 4ae504000428548d0a0a116562d4a623, type: 2}
+  Modified:
+    m_PersistentCalls:
+      m_Calls: []
+  Initiated:
+    m_PersistentCalls:
+      m_Calls: []
+  PageInitiated:
+    m_PersistentCalls:
+      m_Calls: []
+  GoingBack:
+    m_PersistentCalls:
+      m_Calls: []
+  Completed:
+    m_PersistentCalls:
+      m_Calls: []
+  Quit:
+    m_PersistentCalls:
+      m_Calls: []
