@@ -1,0 +1,204 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff771ccdf4150419d9ff4d342b069aae, type: 3}
+  m_Name: 9-BuildCar
+  m_EditorClassIdentifier: 
+  m_Paragraphs:
+    m_Items:
+    - m_Type: 6
+      Title:
+        m_Untranslated: 
+      Text:
+        m_Untranslated: 
+      m_Tutorial: {fileID: 0}
+      m_Image: {fileID: 0}
+      m_Video: {fileID: 0}
+      m_CriteriaCompletion: 0
+      m_Criteria:
+        m_Items: []
+      m_MaskingSettings:
+        m_MaskingEnabled: 0
+        m_UnmaskedViews: []
+      m_Summary: 
+      m_Description: 
+      m_InstructionBoxTitle: 
+      m_InstructionText: 
+      m_TutorialButtonText: 
+    - m_Type: 0
+      Title:
+        m_Untranslated: Make Multiple Wheels
+      Text:
+        m_Untranslated: You'll make the Wheel GameObject, with Rim as a child, a
+          prefab that can be used to create multiple wheels for your vehicle. Remember
+          that you need at least two driveable wheels. Be careful with your Monster
+          Car hierarchy as you continue buidling your vehicle.
+      m_Tutorial: {fileID: 0}
+      m_Image: {fileID: 0}
+      m_Video: {fileID: 0}
+      m_CriteriaCompletion: 0
+      m_Criteria:
+        m_Items: []
+      m_MaskingSettings:
+        m_MaskingEnabled: 0
+        m_UnmaskedViews: []
+      m_Summary: 
+      m_Description: 
+      m_InstructionBoxTitle: 
+      m_InstructionText: 
+      m_TutorialButtonText: 
+    - m_Type: 1
+      Title:
+        m_Untranslated: Wheel Prefab
+      Text:
+        m_Untranslated: '1. Now open the Prefabs folder in the Project window.
+
+
+          2.
+          Left-click the Wheel GameObject in the Hierarchy window and drag it into
+          the Prefabs folder in the Project window.
+
+
+          NOTE: You''ve now
+          created a prefab of your vehicle''s wheels. You can change the textures
+          or dimensions of all your wheels by simply editing this single prefab at
+          any time.
+
+
+          3. Once your Wheel prefab appears in the Prefabs
+          folder, delete Wheel GameObject in the Hierarchy window by right-clicking
+          it and selecting Delete.
+
+
+          4. Use your prefab to create as many
+          wheels as you need by dragging the Wheel prefab into the Scene editor or
+          Hierarchy window.
+
+
+          REMINDER: You must have at least two driveable
+          wheels on your vehicle.
+
+
+          5. Reposition your Wheel GameObjects
+          using the Transform and Rotation tools as needed. Continue placing your
+          wheels onto your chassis in the Scene editor until your monster car appears
+          as you intended.
+
+
+          6. Rename your Wheel GameObjects appropriately
+          in the Hierarchy window. For example, FrontLeftWheel, RearLeftWheel, etc.
+          This is important to control the meshes later with a script.
+
+
+          7.
+          If you haven''t done so yet, make sure each wheel GameObject you created
+          with the prefab is a child of the Meshes GameObject in the Hierarchy window.
+          (Remember that Meshes is a child GameObject of Wheels.)
+
+
+          When
+          your monster car appears as you intended, save your Scene and Project.
+
+
+          Share
+          your project with your teacher and complete the tutorial questions in the
+          CodeHS editor.
+
+
+          Select the Tutorial 2: Apply Materials and Textures
+          button to advance to the next tutorial.'
+      m_Tutorial: {fileID: 0}
+      m_Image: {fileID: 0}
+      m_Video: {fileID: 0}
+      m_CriteriaCompletion: 0
+      m_Criteria:
+        m_Items: []
+      m_MaskingSettings:
+        m_MaskingEnabled: 0
+        m_UnmaskedViews: []
+      m_Summary: 
+      m_Description: 
+      m_InstructionBoxTitle: 
+      m_InstructionText: 
+      m_TutorialButtonText: 
+    - m_Type: 2
+      Title:
+        m_Untranslated: 
+      Text:
+        m_Untranslated: 'Tutorial 2: Apply Materials and Textures'
+      m_Tutorial: {fileID: 11400000, guid: 2c8a8854626c344899b5a30f0a7a2b32, type: 2}
+      m_Image: {fileID: 0}
+      m_Video: {fileID: 0}
+      m_CriteriaCompletion: 0
+      m_Criteria:
+        m_Items: []
+      m_MaskingSettings:
+        m_MaskingEnabled: 0
+        m_UnmaskedViews: []
+      m_Summary: 
+      m_Description: 
+      m_InstructionBoxTitle: 
+      m_InstructionText: 
+      m_TutorialButtonText: 
+  m_CameraSettings:
+    m_CameraMode: 0
+    m_FocusMode: 0
+    m_Orthographic: 0
+    m_Size: 0
+    m_Pivot: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: 0, y: 0, z: 0, w: 0}
+    m_FrameObject:
+      m_SceneGuid: 
+      m_GameObjectGuid: 
+      m_SerializedComponentType:
+        m_TypeName: 
+      m_ComponentIndex: 0
+      m_AssetObject: {fileID: 0}
+      m_Prefab: {fileID: 0}
+    m_Enabled: 0
+  NextButton:
+    m_Untranslated: Next
+  DoneButton:
+    m_Untranslated: Done
+  m_CompletedSound: {fileID: 0}
+  m_AutoAdvance: 0
+  Showing:
+    m_PersistentCalls:
+      m_Calls: []
+  Shown:
+    m_PersistentCalls:
+      m_Calls: []
+  Staying:
+    m_PersistentCalls:
+      m_Calls: []
+  CriteriaValidated:
+    m_PersistentCalls:
+      m_Calls: []
+  MaskingSettingsChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  NonMaskingSettingsChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnBeforePageShown:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAfterPageShown:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnTutorialPageStay:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnBeforeTutorialQuit:
+    m_PersistentCalls:
+      m_Calls: []
+  m_NextButton: Next
+  m_DoneButton: Done

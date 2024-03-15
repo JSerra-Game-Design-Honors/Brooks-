@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89305aa391d1c5141bbe1628d930a2c5, type: 3}
+  m_Name: Tutorials
+  m_EditorClassIdentifier: 
+  Modified:
+    m_PersistentCalls:
+      m_Calls: []
+  ParentContainer: {fileID: 0}
+  OrderInView: 0
+  BackgroundImage: {fileID: 0}
+  Title:
+    m_Untranslated: Model Creation
+  Subtitle:
+    m_Untranslated: Monster Car
+  Description:
+    m_Untranslated: 
+  ProjectLayout: {fileID: 102900000, guid: cc5a4347551304f839df11ff2898b471, type: 3}
+  Sections:
+  - OrderInView: 0
+    Heading:
+      m_Untranslated: Tutorial 1
+    Text:
+      m_Untranslated: Build Low Poly Car
+    Metadata: 
+    Url: 
+    Image: {fileID: 2800000, guid: f205e29977086410ea4aea33507ea5e6, type: 3}
+    Tutorial: {fileID: 11400000, guid: 173ae30ed236b4c77a52f7beed4cadc8, type: 2}
+  - OrderInView: 1
+    Heading:
+      m_Untranslated: Tutorial 2
+    Text:
+      m_Untranslated: Apply Materials and Textures
+    Metadata: 
+    Url: 
+    Image: {fileID: 2800000, guid: d2525afc7ba044e76b8b827c53917bb8, type: 3}
+    Tutorial: {fileID: 11400000, guid: 2c8a8854626c344899b5a30f0a7a2b32, type: 2}
+  - OrderInView: 2
+    Heading:
+      m_Untranslated: Tutorial 3
+    Text:
+      m_Untranslated: Create and Apply Colliders
+    Metadata: 
+    Url: 
+    Image: {fileID: 2800000, guid: 240af033388194ccd85d8d351cf6963a, type: 3}
+    Tutorial: {fileID: 11400000, guid: 260dfc263dc9d493f8bf30503bce5bf4, type: 2}
+  - OrderInView: 3
+    Heading:
+      m_Untranslated: Tutorial 4
+    Text:
+      m_Untranslated: Configure Vehicle Controls Script
+    Metadata: 
+    Url: 
+    Image: {fileID: 2800000, guid: 5a9d1f09993544f328b2a8842d337fe5, type: 3}
+    Tutorial: {fileID: 11400000, guid: 5989c42275d1f4faf9d5e24b948a970b, type: 2}

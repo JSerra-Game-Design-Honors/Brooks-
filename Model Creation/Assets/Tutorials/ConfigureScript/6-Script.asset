@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff771ccdf4150419d9ff4d342b069aae, type: 3}
+  m_Name: 6-Script
+  m_EditorClassIdentifier: 
+  m_Paragraphs:
+    m_Items:
+    - m_Type: 6
+      Title:
+        m_Untranslated: 
+      Text:
+        m_Untranslated: 
+      m_Tutorial: {fileID: 0}
+      m_Image: {fileID: 0}
+      m_Video: {fileID: 0}
+      m_CriteriaCompletion: 0
+      m_Criteria:
+        m_Items: []
+      m_MaskingSettings:
+        m_MaskingEnabled: 0
+        m_UnmaskedViews: []
+      m_Summary: 
+      m_Description: 
+      m_InstructionBoxTitle: 
+      m_InstructionText: 
+      m_TutorialButtonText: 
+    - m_Type: 0
+      Title:
+        m_Untranslated: Script Properties
+      Text:
+        m_Untranslated: The Vehicle Controls script comes with a lot of built-in
+          properties that can be altered to meet the needs of your vehicle design.
+          Let's address these properties one at a time. To start, look at the Axel
+          Infos section at the top of the Vehicle Controls script component in the
+          Inspector window.
+      m_Tutorial: {fileID: 0}
+      m_Image: {fileID: 0}
+      m_Video: {fileID: 0}
+      m_CriteriaCompletion: 0
+      m_Criteria:
+        m_Items: []
+      m_MaskingSettings:
+        m_MaskingEnabled: 0
+        m_UnmaskedViews: []
+      m_Summary: 
+      m_Description: 
+      m_InstructionBoxTitle: 
+      m_InstructionText: 
+      m_TutorialButtonText: 
+    - m_Type: 1
+      Title:
+        m_Untranslated: Add Axel Infos
+      Text:
+        m_Untranslated: '1. In the Vehicle Controls script component, enter the number
+          of axels your vehicle will use next to the Axel Infos property.
+
+
+          NOTE:
+          The number of axels you''ll use to control your vehicle can, but doesn''t
+          necessarily have to, equal the number of wheels you have.
+
+
+          For
+          example, the monster car pictured above has 3 wheels and 2 axels - 1 axel
+          connecting the 2 front wheels and 1 axel for the back wheel. However, if
+          these 3 wheels were arranged in a line, like some type of 3-wheeled motorcycle,
+          it would need 3 axels - 1 for each wheel.
+
+
+          2. Once you''ve entered
+          the number of axels, select the dropdown arrow next to Axel Infos to expand
+          each axel''s properties.
+
+
+          Starting with "Element 0", you should
+          now see an expandable element listed for each axel with additional properties.
+
+
+          3.
+          For each axel/element listed, select the Left/Right Wheel Collider and
+          Left/Right Wheel Mesh by clicking on the dot inside the circle icon.
+
+
+          NOTE:
+          The wheel colliders should correspond with the wheel meshes for each axel.
+          If you have an odd number of wheels for any of the axels/elements, select
+          the same Wheel Collider and Wheel Mesh for both Left and Right.
+
+
+          4.
+          Choose 1 or more axels/elements to serve as your vehicle''s motor by checking
+          the Motor property for that axel/element.
+
+
+          NOTE: The more axels
+          attached to the motor, the more powerful your vehicle''s acceleration.
+
+
+          5.
+          Choose at least 1 axel/element to steer your monster car. Typically only
+          1 axel/element steers a vehicle.
+
+
+          When finished with the Axel
+          Infos section of the Vehicle Controls script component, select Next to
+          continue.'
+      m_Tutorial: {fileID: 0}
+      m_Image: {fileID: 0}
+      m_Video: {fileID: 0}
+      m_CriteriaCompletion: 0
+      m_Criteria:
+        m_Items: []
+      m_MaskingSettings:
+        m_MaskingEnabled: 0
+        m_UnmaskedViews: []
+      m_Summary: 
+      m_Description: 
+      m_InstructionBoxTitle: 
+      m_InstructionText: 
+      m_TutorialButtonText: 
+  m_CameraSettings:
+    m_CameraMode: 0
+    m_FocusMode: 0
+    m_Orthographic: 0
+    m_Size: 0
+    m_Pivot: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: 0, y: 0, z: 0, w: 0}
+    m_FrameObject:
+      m_SceneGuid: 
+      m_GameObjectGuid: 
+      m_SerializedComponentType:
+        m_TypeName: 
+      m_ComponentIndex: 0
+      m_AssetObject: {fileID: 0}
+      m_Prefab: {fileID: 0}
+    m_Enabled: 0
+  NextButton:
+    m_Untranslated: Next
+  DoneButton:
+    m_Untranslated: Done
+  m_CompletedSound: {fileID: 0}
+  m_AutoAdvance: 0
+  Showing:
+    m_PersistentCalls:
+      m_Calls: []
+  Shown:
+    m_PersistentCalls:
+      m_Calls: []
+  Staying:
+    m_PersistentCalls:
+      m_Calls: []
+  CriteriaValidated:
+    m_PersistentCalls:
+      m_Calls: []
+  MaskingSettingsChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  NonMaskingSettingsChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnBeforePageShown:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAfterPageShown:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnTutorialPageStay:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnBeforeTutorialQuit:
+    m_PersistentCalls:
+      m_Calls: []
+  m_NextButton: Next
+  m_DoneButton: Done

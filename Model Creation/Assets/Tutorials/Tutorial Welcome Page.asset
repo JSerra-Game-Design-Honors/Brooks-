@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0885f594ab85594caa28e1a96cbe0d8, type: 3}
+  m_Name: Tutorial Welcome Page
+  m_EditorClassIdentifier: 
+  Modified:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Image: {fileID: 2800000, guid: 9437252fe64674942b9548a4149f31f3, type: 3}
+  m_WindowTitle:
+    m_Untranslated: Model Creation
+  m_Title:
+    m_Untranslated: Monster Car
+  m_Description:
+    m_Untranslated: 'In these tutorials you''ll build a monster vehicle. You''ll
+      start by constructing a 3D model of your car in Unity. Using the Hierarchy
+      window to organize your vehicle''s GameObjects will be crucial.
+
+
+      Vehicles
+      are tricky to create, but using wheel colliders and a provided vehicle controller
+      script, you''ll be able to drive your monster car around.
+
+
+      You''ll learn
+      more about controlling how objects behave in game environments using physics
+      components like wheel, box, and mesh colliders.
+
+
+      Let''s get started!'
+  m_Buttons:
+  - Text:
+      m_Untranslated: Close
+    Tooltip:
+      m_Untranslated: 
+    OnClick:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000}
+          m_TargetAssemblyTypeName: Unity.Tutorials.Core.Editor.TutorialWelcomePage,
+            Unity.Tutorials.Core.Editor
+          m_MethodName: CloseCurrentModalDialog
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
