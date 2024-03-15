@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00054169, y: -0.0014486}
-  m_SizeDelta: {x: 1280, y: 760.21}
+  m_AnchoredPosition: {x: -0.0093422, y: 0.001008}
+  m_SizeDelta: {x: 1390, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &540065046
 CanvasRenderer:
@@ -244,7 +244,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 255.51599
+  orthographic size: 240.03937
   m_Depth: -3
   m_CullingMask:
     serializedVersion: 2
@@ -734,6 +734,6 @@ MonoBehaviour:
     freedom is deeply ingrained in their very nature.
   - Perhaps, only at the journey's end will they find the answers they seek. The
     wind is not the cage; the true shackles are the ones within their hearts.
-  nextSceneName: SampleScene
+  nextSceneName: MainScene
   typingSpeed: 0.03
   fadeDuration: 1
