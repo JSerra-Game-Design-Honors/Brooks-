@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -130,13 +130,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3479110233695997633, guid: 89ea22a047405c64c9f9f036eef24928, type: 3}
+      propertyPath: dialogUI
+      value: 
+      objectReference: {fileID: 2053894236}
     - target: {fileID: 4370550733503618505, guid: 89ea22a047405c64c9f9f036eef24928, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 837
+      value: 956
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370550733503618505, guid: 89ea22a047405c64c9f9f036eef24928, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 509.34
       objectReference: {fileID: 0}
     - target: {fileID: 4370550733503618505, guid: 89ea22a047405c64c9f9f036eef24928, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0010793
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370550733503618505, guid: 89ea22a047405c64c9f9f036eef24928, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0025313
       objectReference: {fileID: 0}
     - target: {fileID: 5212910095409380938, guid: 89ea22a047405c64c9f9f036eef24928, type: 3}
       propertyPath: m_Name
@@ -338,8 +350,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -352,7 +364,7 @@ Camera:
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!4 &2049494201
@@ -370,3 +382,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2053894236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4695364140146258063, guid: 89ea22a047405c64c9f9f036eef24928, type: 3}
+  m_PrefabInstance: {fileID: 89329481}
+  m_PrefabAsset: {fileID: 0}

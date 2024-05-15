@@ -25,8 +25,10 @@ public class Dialog : MonoBehaviour
     public Button next;
     public GameObject optionButton;
     public Transform buttonGroup;
-
     public string nextScene;
+
+    public GameObject dialogUI; // 添加这个字段来引用整个对话UI的根对象
+
     private void Awake()
     {
         PopulateImageDictionary();
@@ -45,7 +47,7 @@ public class Dialog : MonoBehaviour
         spriteLeft.enabled = false;
         spriteRight.enabled = false;
         ReadText(dialogDataFile);
-        ShowDiaLogRow();
+        ShowDialogRow();
     }
 
     public void UpdateText(string _name, string _text)
@@ -56,19 +58,23 @@ public class Dialog : MonoBehaviour
 
     public void UpdateImage(string _name, string _position)
     {
-        Sprite sprite = imageDic[_name];
-        if (_position == "Left")
+        if (imageDic.TryGetValue(_name, out Sprite sprite))
         {
-            spriteLeft.sprite = sprite;
-            spriteLeft.enabled = true; // 显示SpriteRenderer
+            if (_position == "Left")
+            {
+                spriteLeft.sprite = sprite;
+                spriteLeft.enabled = true;
+            }
+            else if (_position == "Right")
+            {
+                spriteRight.sprite = sprite;
+                spriteRight.enabled = true;
+            }
         }
-        else if (_position == "Right")
+        else
         {
-            spriteRight.sprite = sprite;
-            spriteRight.enabled = true; // 显示SpriteRenderer
+            Debug.LogError($"Sprite not found for {_name}");
         }
-
-
     }
 
     public void ReadText(TextAsset _textAsset)
@@ -76,14 +82,24 @@ public class Dialog : MonoBehaviour
         dialogRows = _textAsset.text.Split('\n');
     }
 
-    public void ShowDiaLogRow()
+    public void ShowDialogRow()
     {
+        if (dialogIndex >= dialogRows.Length)
+        {
+            Debug.Log("No more dialogs to show.");
+            EndDialogue();
+            return;
+        }
+
         for (int i = 0; i < dialogRows.Length; i++)
         {
             string[] cells = dialogRows[i].Split(',');
 
             if (cells.Length < 6)
-                continue; // Ensure we have enough data
+            {
+                Debug.LogError("Insufficient data in dialog row: " + dialogRows[i]);
+                continue;
+            }
 
             if (cells[0] == "#" && int.Parse(cells[1]) == dialogIndex)
             {
@@ -94,15 +110,13 @@ public class Dialog : MonoBehaviour
             {
                 next.gameObject.SetActive(false);
                 GenerateOption(i);
+                break; // 确保不掉到标准对话处理程序中
             }
             else if (cells[0] == "End" && int.Parse(cells[1]) == dialogIndex)
             {
                 Debug.Log("The End");
-                UIManager uIManager = FindAnyObjectByType<UIManager>();
-                if (uIManager != null)
-                {
-                    uIManager.StartGame();
-                }
+                EndDialogue();
+                break;
             }
         }
     }
@@ -117,7 +131,7 @@ public class Dialog : MonoBehaviour
 
     public void OnClickNext()
     {
-        ShowDiaLogRow();
+        ShowDialogRow();
     }
 
     public void GenerateOption(int _index)
@@ -130,17 +144,47 @@ public class Dialog : MonoBehaviour
             button.GetComponentInChildren<TMP_Text>().text = cells[4];
             int targetDialogId = int.Parse(cells[5]);
             button.GetComponent<Button>().onClick.AddListener(() => OnOptionClick(targetDialogId));
-            GenerateOption(_index + 1);
+            GenerateOption(_index + 1); // 递归调用以处理可能的连续选项
         }
     }
 
     public void OnOptionClick(int _id)
     {
-        dialogIndex = _id;
-        ShowDiaLogRow();
+        dialogIndex = _id; // 更新对话索引以反映所选选项
+        ShowDialogRow(); // 显示新的对话内容
+        // 清理之前的选项按钮
         for (int i = 0; i < buttonGroup.childCount; i++)
         {
             Destroy(buttonGroup.GetChild(i).gameObject);
+        }
+    }
+
+    private void EndDialogue()
+    {
+        Debug.Log("The dialogue has ended.");
+
+        // 禁用对话系统的 UI 元素
+        if (spriteLeft != null) spriteLeft.enabled = false;
+        if (spriteRight != null) spriteRight.enabled = false;
+        if (nameText != null) nameText.gameObject.SetActive(false);
+        if (dialogText != null) dialogText.gameObject.SetActive(false);
+        if (next != null) next.gameObject.SetActive(false);
+        if (buttonGroup != null) buttonGroup.gameObject.SetActive(false);
+        if (buttonGroup != null) buttonGroup.gameObject.SetActive(false);
+
+        // 禁用对话系统的根对象
+        if (dialogUI != null)
+        {
+            dialogUI.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("Dialog UI is not assigned.");
+        }
+
+        if (!string.IsNullOrEmpty(nextScene))
+        {
+            SceneManager.LoadScene(nextScene); // 使用 SceneManager 加载下一个场景
         }
     }
 }

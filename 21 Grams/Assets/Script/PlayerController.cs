@@ -6,16 +6,16 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
-    public float wallJumpForce = 10f;
-    public float wallCheckDistance = 0.5f;
-    public LayerMask wallLayer;
-    public LayerMask groundLayer; // 添加地面LayerMask
+    public float dashForce = 10f;
+    public float dashDuration = 0.5f;
+    public LayerMask groundLayer;
 
     private bool isJumping = false;
+    private bool isDashing = false;
+    private bool canDoubleJump = true;
     private Rigidbody2D rb;
     private Animator animator;
-
-    private static readonly float Angle45InRad = 45f * Mathf.Deg2Rad; // 45度的弧度值
+    private Vector2 dashDirection;
 
     void Start()
     {
@@ -25,10 +25,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Move();
+        if (!isDashing)
+        {
+            Move();
+        }
+
         Jump();
-        WallJump();
-        WallSlide();
+        if (isDashing)
+        {
+            Dash();
+        }
     }
 
     void Move()
@@ -42,58 +48,45 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetButtonDown("Jump") && !isJumping)
+        if (Input.GetButtonDown("Jump"))
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            isJumping = true;
+            if (!isJumping)
+            {
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                isJumping = true;
+            }
+            else if (canDoubleJump && !isDashing)
+            {
+                StartCoroutine(EnterDashState());
+            }
         }
     }
 
-    void WallJump()
+    IEnumerator EnterDashState()
     {
-        if (IsTouchingWall() && Input.GetButtonDown("Jump"))
-        {
-            Vector2 direction = new Vector2(Mathf.Cos(Angle45InRad), Mathf.Sin(Angle45InRad));
-            Vector2 jumpDirection = (IsTouchingLeftWall() ? direction : new Vector2(-direction.x, direction.y));
-            rb.velocity = jumpDirection * wallJumpForce;
-            isJumping = false;
-        }
+        isDashing = true;
+        rb.velocity = Vector2.zero;  // 停滞
+        yield return new WaitForSeconds(0.2f);  // 停滞时间
+        Vector2 inputDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        dashDirection = inputDirection == Vector2.zero ? Vector2.right : inputDirection;  // 如果没有输入方向，则默认为向右
+
+        rb.AddForce(dashDirection * dashForce, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(dashDuration);
+        isDashing = false;
+        canDoubleJump = false;  // 禁止再次使用二段跳
     }
 
-    void WallSlide()
+    void Dash()
     {
-        if (IsTouchingWall() && !isJumping && rb.velocity.y < 0)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -0.5f, float.MaxValue));
-        }
-    }
-
-    private bool IsTouchingWall()
-    {
-        return IsTouchingDirection(Vector2.left) || IsTouchingDirection(Vector2.right);
-    }
-
-    private bool IsTouchingLeftWall()
-    {
-        return IsTouchingDirection(Vector2.left);
-    }
-
-    private bool IsTouchingRightWall()
-    {
-        return IsTouchingDirection(Vector2.right);
-    }
-
-    private bool IsTouchingDirection(Vector2 direction)
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, wallCheckDistance, wallLayer);
-        return hit.collider != null;
+        rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, Time.deltaTime * 2);  // 逐渐减速
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (((1 << collision.gameObject.layer) & groundLayer) != 0) // 使用LayerMask检测地面
+        if (((1 << collision.gameObject.layer) & groundLayer) != 0)
         {
             isJumping = false;
+            canDoubleJump = true;  // 重置二段跳
         }
     }
 }
