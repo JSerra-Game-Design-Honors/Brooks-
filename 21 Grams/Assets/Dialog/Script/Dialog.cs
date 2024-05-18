@@ -27,7 +27,7 @@ public class Dialog : MonoBehaviour
     public Transform buttonGroup;
     public string nextScene;
 
-    public GameObject dialogUI; // 添加这个字段来引用整个对话UI的根对象
+    public GameObject dialogUI; // 引用整个对话UI的根对象
 
     private void Awake()
     {
@@ -90,6 +90,8 @@ public class Dialog : MonoBehaviour
             EndDialogue();
             return;
         }
+
+        Debug.Log("Showing dialog row: " + dialogIndex);
 
         for (int i = 0; i < dialogRows.Length; i++)
         {
@@ -162,15 +164,6 @@ public class Dialog : MonoBehaviour
     private void EndDialogue()
     {
         Debug.Log("The dialogue has ended.");
-
-        // 禁用对话系统的 UI 元素
-        if (spriteLeft != null) spriteLeft.enabled = false;
-        if (spriteRight != null) spriteRight.enabled = false;
-        if (nameText != null) nameText.gameObject.SetActive(false);
-        if (dialogText != null) dialogText.gameObject.SetActive(false);
-        if (next != null) next.gameObject.SetActive(false);
-        if (buttonGroup != null) buttonGroup.gameObject.SetActive(false);
-        if (buttonGroup != null) buttonGroup.gameObject.SetActive(false);
 
         // 禁用对话系统的根对象
         if (dialogUI != null)
