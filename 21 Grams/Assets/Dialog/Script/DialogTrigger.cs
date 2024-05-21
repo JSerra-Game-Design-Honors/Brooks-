@@ -12,7 +12,7 @@ public class DialogTrigger : MonoBehaviour
         }
     }
 
-    void ShowDialog()
+    public void ShowDialog()
     {
         if (dialogObject != null)
         {
@@ -28,7 +28,7 @@ public class DialogTrigger : MonoBehaviour
         }
     }
 
-    void HideDialog()
+    public void HideDialog()
     {
         if (dialogObject != null)
         {

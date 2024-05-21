@@ -1,0 +1,8 @@
+Symbol,ID,Character,Location,Text,Jump to,Effect
+#,0,Soul,Left,Great! I did it!,1,
+#,1,Soul,Left,I seem to remember something. 'Pressing jump (space) and directional keys while in the air allows for a dash,2,
+#,2,Soul,Left,But what does that mean... what is 'space'?,3,
+#,3,Soul,Left,Huh? Why did a coin score chart pop up in the top left corner?,4,
+#,4,Soul,Left,My intuition tells me that the only way to find the truth is to jump down from here,5,
+#,5,Soul,Left, …...Huuh I think I'm ready. Let's do it!,6,
+End,6,,,,,

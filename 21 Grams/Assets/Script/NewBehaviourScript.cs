@@ -1,18 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class CoinManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static CoinManager instance;
+    public int totalCoins;
+    private int collectedCoins;
+
+    public DialogTrigger dialogTrigger; // 引用 DialogTrigger 脚本
+
+    private void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RegisterCoin()
     {
-        
+        totalCoins++;
+    }
+
+    public void CollectCoin()
+    {
+        collectedCoins++;
+        if (collectedCoins >= totalCoins)
+        {
+            dialogTrigger.ShowDialog();
+        }
     }
 }

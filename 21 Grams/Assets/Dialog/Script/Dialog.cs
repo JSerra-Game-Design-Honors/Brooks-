@@ -161,23 +161,28 @@ public class Dialog : MonoBehaviour
         }
     }
 
+    private void ResetDialogueUI()
+    {
+        spriteLeft.enabled = false;
+        spriteRight.enabled = false;
+        nameText.text = "";
+        dialogText.text = "";
+        // 清理所有选项按钮
+        foreach (Transform child in buttonGroup)
+        {
+            Destroy(child.gameObject);
+        }
+        next.gameObject.SetActive(true);
+    }
+
     private void EndDialogue()
     {
         Debug.Log("The dialogue has ended.");
-
-        // 禁用对话系统的根对象
-        if (dialogUI != null)
-        {
-            dialogUI.SetActive(false);
-        }
-        else
-        {
-            Debug.LogError("Dialog UI is not assigned.");
-        }
-
+        ResetDialogueUI(); // 调用重置UI的方法
+        dialogUI.SetActive(false); // 禁用对话系统的根对象
         if (!string.IsNullOrEmpty(nextScene))
         {
-            SceneManager.LoadScene(nextScene); // 使用 SceneManager 加载下一个场景
+            SceneManager.LoadScene(nextScene);
         }
     }
 }

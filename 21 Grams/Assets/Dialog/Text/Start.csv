@@ -1,0 +1,8 @@
+Symbol,ID,Character,Location,Text,Jump to,Effect
+#,0,Soul,Left,Where am I?,1,
+#,1,Soul,Left,Why can't I remember anything...,2,
+#,2,Soul,Left,This place feels so familiar.,3,
+#,3,Soul,Left,Anyway let's look around first,4,
+#,4,Soul,Left,What's that on the left... a... coin?,5,
+#,5,Soul,Left,Go try to touch it. it might help me.,6,
+End,6,,,,,
